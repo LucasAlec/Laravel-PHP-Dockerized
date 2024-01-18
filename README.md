@@ -1,8 +1,8 @@
+# A Laravel & PHP Dockerized Project
 
+Setup mais complexo envolvendo docker.
 
-
-
-### Passo a passo
+## Passo a passo
 
 - Adicionar um container de Nginx (Web Server)
 
@@ -16,11 +16,9 @@
 
 `docker-compose run  --rm composer create-project --prefer-dist laravel/laravel .`
 
-- Testar serviços do docker compose:
+- Testar serviços do docker compose. Foi criado `depends on` para `php` e `mysql` dentro de `server` tornar o código menos verboso:
 
-Foi criado `depends on` para `php` e `mysql` dentro de `server` tornar o código menos verboso:
-
-´docker-compose up -d --build server´
+`docker-compose up -d --build server`
 
 - Adiconar utilities artisan e npm. Após isso testar a migração para Artisan:
 
